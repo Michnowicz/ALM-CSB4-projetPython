@@ -7,11 +7,11 @@ from fonctions.ennemies import Ennemy, Boss
 
 
 # creation d'ennemis
-slime = Ennemy("gluant", 100, 100, 20, 0, random.randint(0, 10), 10)
-gobelin = Ennemy("gobelin", 120, 120, 20, 3, random.randint(3, 15), 15)
-wolf = Ennemy("loup sauvage", 130, 130, 25, 1, random.randint(3, 15), 15)
-zombie = Ennemy("zombie", 150, 150, 20, 5, random.randint(5, 25), 20)
-skeleton = Ennemy("squelette", 140, 140, 23, 4, random.randint(5, 25), 20)
+slime = Ennemy("gluant", 50, 50, 20, 0, random.randint(0, 10), 10)
+gobelin = Ennemy("gobelin", 60, 60, 20, 3, random.randint(3, 15), 15)
+wolf = Ennemy("loup sauvage", 70, 70, 25, 1, random.randint(3, 15), 15)
+zombie = Ennemy("zombie", 80, 80, 20, 5, random.randint(5, 25), 20)
+skeleton = Ennemy("squelette", 75, 75, 23, 4, random.randint(5, 25), 20)
 
 # création de boss
 troll = Boss("troll", 230, 230, 25, 7, 100, 100)

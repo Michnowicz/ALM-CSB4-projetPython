@@ -12,12 +12,15 @@ class Ennemy:
 
     def use_attack(self, player):
         print(f"{self.name} lance un attaque.")
-        if player.armor - self.atk >= 0:
-            dmg = 0
+        if self.atk > player.armor:
+            damage = self.atk - player.armor
         else:
-            dmg = self.atk - player.armor
-        player.hp = player.hp - dmg
-        print(f"{player.name} perd {dmg} points de vie.")
+            damage = 0
+        if player.hp < damage:
+            player.hp = 0
+        else:
+            player.hp -= damage
+        print(f"{player.name} perd {damage} points de vie.")
 
 
 class Boss(Ennemy):

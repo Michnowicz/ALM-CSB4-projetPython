@@ -4,20 +4,20 @@ from fonctions.random_encounter import random_encounter
 
 def search(player, places):
     roll = random.randint(1, 20)
-    if roll < 8:
-        print("combat")
-    elif roll > 8:
-        print(f"\n{player.name} fouille la zone de fond en comble.")
-        for place in places:
-            if place.name == player.place:
-                if len(place.objects) > 0:
-                    random_index = random.randint(0, len(place.objects)-1)
-                    object = place.objects[random_index]
-                    player.inventory.append(object)
-                    del place.objects[random_index]
-                    print(f"{player.name} trouve {object}.")
+    for place in places:
+        if place.name == player.place:
+                if roll < 8:
+                    random_encounter(player, place)
                 else:
-                    print(f"\nLa zone semble vide.")
+                    print(f"\n{player.name} fouille la zone de fond en comble.")
+                    if len(place.objects) > 0:
+                        random_index = random.randint(0, len(place.objects)-1)
+                        object = place.objects[random_index]
+                        player.inventory.append(object)
+                        del place.objects[random_index]
+                        print(f"{player.name} trouve {object}.")
+                    else:
+                        print(f"\nLa zone semble vide.")
 
 
 def move(player, places):
