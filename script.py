@@ -1,8 +1,8 @@
 import random
-from fonctions.place import Place
-from fonctions.class_choice import class_choice
-from fonctions.main_action import main_action 
-from fonctions.ennemies import Ennemy, Boss
+from classes.place import Place
+from methodes.class_choice import class_choice
+from methodes.main_action import main_action 
+from classes.ennemies import Ennemy, Boss
 
 
 
@@ -19,7 +19,7 @@ tiamat = Boss("Tiamat", 9999, 9999, 500, 100, 10000, 10000)
 
 # création des lieux
 maison = Place("maison", [], [], [])
-village = Place("village", ["bouclier en fer", "potion"], [slime, gobelin], [])
+village = Place("village", ["bouclier en fer", "potion"], [], [])
 foret = Place("forêt", ["fleur", "bâton en fer"], [slime, gobelin, wolf], [tiamat])
 grotte = Place("grotte", ["vieille clé", "minerai d'or"], [gobelin, skeleton], [tiamat])
 donjon = Place("donjon", ["rubis"], [skeleton, zombie, slime], [tiamat, troll])
