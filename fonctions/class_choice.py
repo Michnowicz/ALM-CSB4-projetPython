@@ -1,4 +1,4 @@
-from fonctions.personnage import Warrior, Mage, Ranger
+from fonctions.character import Warrior, Mage, Ranger
 
 
 def class_choice(name):

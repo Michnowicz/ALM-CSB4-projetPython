@@ -1,10 +1,10 @@
 import random
 from fonctions.place import Place
+from fonctions.character import Warrior
 from fonctions.class_choice import class_choice
 from fonctions.main_action import main_action 
 from fonctions.ennemies import Ennemy, Boss
-
-
+from fonctions.random_encounter import random_encounter
 
 # creation d'ennemis
 slime = Ennemy("gluant", 100, 100, 20, 0, random.randint(0, 10), 10)
@@ -22,17 +22,16 @@ maison = Place("maison", [], [], [])
 village = Place("village", ["bouclier en fer", "potion"], [slime, gobelin], [])
 foret = Place("forêt", ["fleur", "bâton en fer"], [slime, gobelin, wolf], [tiamat])
 grotte = Place("grotte", ["vieille clé", "minerai d'or"], [gobelin, skeleton], [tiamat])
-donjon = Place("donjon", ["rubis"], [skeleton, zombie, slime], [tiamat, troll])
+donjon = Place("donjon", ["rubis"], [skeleton, zombie, slime], [troll, tiamat])
 places = [maison, village, foret, grotte, donjon]
 
 
+#perso 
+player = Warrior("Julio")
 
 
 
-# création du personnage
-print("Comment vous appelez-vous?")
-name = input("> ")
-player = class_choice(name)
 
-# actions
-main_action(player, places)
+
+#test
+random_encounter(player, grotte)
