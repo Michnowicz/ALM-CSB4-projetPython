@@ -1,7 +1,7 @@
 
 
 class Place:
-    def __init__(self,name, object):
+    def __init__(self,name, objects):
         self.name = name
-        self.object = object
+        self.objects = objects
 

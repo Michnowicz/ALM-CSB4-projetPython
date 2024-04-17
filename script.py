@@ -5,11 +5,11 @@ from fonctions.main_action import main_action
 
 
 # lieux
-maison = Place("maison", "épée en fer")
-village = Place("village", "bouclier en fer")
-foret = Place("forêt", "fleur")
-grotte = Place("grotte", "vieille clé")
-donjon = Place("donjon", "rubis")
+maison = Place("maison", [])
+village = Place("village", ["bouclier en fer", "potion"])
+foret = Place("forêt", ["fleur", "bâton en fer"])
+grotte = Place("grotte", ["vieille clé", "minerai d'or"])
+donjon = Place("donjon", ["rubis"])
 
 places = [maison, village, foret, grotte, donjon]
 

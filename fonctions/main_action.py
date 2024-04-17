@@ -1,4 +1,4 @@
-from fonctions.move import move
+from fonctions.actions import search, move, look_inventory
 
 
 def main_action(player, places):
@@ -8,15 +8,13 @@ def main_action(player, places):
         choice = int(input("> "))
         if choice != 5:
             if choice == 1:
-                print("fouille\n")
+                search(player, places)
             elif choice == 2:
                 move(player, places)
             elif choice == 3:
                 print('se repose\n')
             elif choice == 4:
-                print(f"\n{player.name}")
-                print(f"  or : {player.gold}")
-                print(f"  inventaire : {player.inventory}\n")
+                look_inventory(player)
             else:
                 print("\nCommande erronée. Merci d'entrer un nombre entre 1 et 5")
             return main_action(player, places)
