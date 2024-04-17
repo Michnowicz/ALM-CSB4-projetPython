@@ -1,0 +1,28 @@
+pv: 200 - 300
+atk: 20 - 30
+defense: pas plus grande que la plus faible des atk ennemies
+
+
+Conception de la structure de données pour les personnages, les objets, les ennemis, etc.
+
+Création d'un personnage avec des attributs tels que le nom, la classe, les points de vie, la force, etc.
+
+Génération aléatoire d'ennemis avec des attributs variés (points de vie, force, etc.)
+
+Développement d'un système de combat tour par tour entre le personnage et les ennemis
+
+Intégration d'un système d'inventaire pour collecter des objets, les utiliser et les équiper
+
+Création de différents lieux (villages, donjons, etc.) avec des descriptions et des événements spécifiques
+
+Mise en place de quêtes et de dialogues avec des personnages non joueurs (PNJ)
+
+Implémentation d'un système de sauvegarde et de chargement des parties
+
+Interface utilisateur : Vous pouvez choisir d'implémenter une interface utilisateur en console avec des menus et des interactions textuelles, ou bien une interface graphique simple.
+
+Tests et débogage du jeu pour s'assurer que toutes les fonctionnalités sont correctement implémentées et que le jeu est jouable et cohérent.
+
+Ce projet permettra aux apprenants de mettre en pratique plusieurs concepts de programmation en Python tels que la gestion des classes, des objets, des listes, des boucles, des conditions, des fonctions, etc. De plus, ils pourront également exercer leurs compétences en termes de logique, de résolution de problèmes et d'organisation de code.
+
+N'hésitez pas à adapter et personnaliser ce projet en fonction des besoins et des intérêts spécifiques du groupe d'apprenants.
