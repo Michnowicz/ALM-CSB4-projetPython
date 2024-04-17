@@ -6,6 +6,7 @@ class Player:
         self.place = "maison"
         self.lvl = 1
         self.exp = 0
+        self.nextlvl = 50
         self.gold = 0
         self.inventory = []
 
@@ -21,6 +22,14 @@ class Player:
                 ennemy.hp -= damage
             print(f"Vous infligez {damage} points de dégats à {ennemy.name}.")
 
+    def level_up(self):
+        print(f"\nfélicitations, vous passez de niveau. Les statistiques de {self.name} augmentent.")
+        print(" max hp + 20\n atk + 5")
+        self.lvl += 1
+        self.maxhp += 20
+        self.hp = self.maxhp
+        self.atk += 5
+
 class Warrior(Player):
     def __init__(self, name):
         super().__init__(name)
@@ -29,6 +38,7 @@ class Warrior(Player):
         self.hp = 300
         self.atk = 20
         self.armor = 5
+
 
 
 class Mage(Player):
@@ -50,6 +60,5 @@ class Ranger(Player):
         self.hp = 250
         self.atk = 30
         self.armor = 3
-
 
 

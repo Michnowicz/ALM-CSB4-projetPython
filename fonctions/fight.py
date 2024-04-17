@@ -1,5 +1,4 @@
 
-
 def fight(player, ennemy):
     print(f"\n{player.name} -> pv: {player.hp}/{player.maxhp}")
     print(f"Que voulez-vous faire?")
@@ -24,6 +23,10 @@ def fight(player, ennemy):
                 player.gold += ennemy.gold
                 player.exp += ennemy.exp
                 ennemy.hp = ennemy.maxhp
+                if player.exp >= player.nextlvl:
+                    player.level_up()
+                    player.exp -= player.nextlvl
+                    player.nextlvl += 30
             elif player.hp == 0:
                 print(f"\n{player.name} n'a plus de points de vie.")
 
